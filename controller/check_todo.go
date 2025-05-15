@@ -29,6 +29,6 @@ func NewCheckTodoController(e *echo.Echo, db *sql.DB) {
 		if err != nil {
 			return ctx.String(http.StatusInternalServerError, err.Error())
 		}
-		return ctx.String(http.StatusOK, "OKE")
+		return ctx.String(http.StatusOK, "OK")
 	})
 }
