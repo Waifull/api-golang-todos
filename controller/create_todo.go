@@ -18,7 +18,7 @@ func NewCreateTodoController(e *echo.Echo, db *sql.DB) {
 		json.NewDecoder(ctx.Request().Body).Decode(&request)
 
 		_, err := db.Exec(
-			"INSERT INTO todos (title, description, done) VALUES (?, ?, 0)",
+			"INSERT INTO todos (title, description, done) VALUES (?, ?, 1)",
 			request.Title,
 			request.Description,
 		)
